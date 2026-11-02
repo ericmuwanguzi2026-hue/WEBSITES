@@ -1,0 +1,369 @@
+<html>
+<head>
+  
+    <title>HKM School</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #173b2e;
+        }
+
+        /* NAVIGATION BAR */
+        header {
+            background: #004b35;
+            color: white;
+            min-height: 110px;
+            padding: 15px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            font-size: 55px;
+            color: gold;
+        }
+
+        .logo h1 {
+            font-family: Georgia, serif;
+            font-size: 42px;
+            letter-spacing: 3px;
+        }
+
+        .logo p {
+            letter-spacing: 5px;
+            font-size: 17px;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 12px 0;
+        }
+
+        nav a:hover {
+            color: gold;
+            border-bottom: 3px solid gold;
+        }
+
+        /* SCHOOL BACKGROUND IMAGE */
+        .hero {
+            min-height: 600px;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, 0.70),
+                    rgba(0, 0, 0, 0.10)
+                ),
+                url("school.jpg");
+
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 50px 11%;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero h2 {
+            font-family: Georgia, serif;
+            font-size: 45px;
+            margin-bottom: 5px;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(48px, 6vw, 78px);
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #ffcc00;
+        }
+
+        .motto {
+            font-size: 20px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .description {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 24px;
+            margin-right: 12px;
+            margin-bottom: 10px;
+            background: #ffcc00;
+            color: #004b35;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #004b35;
+        }
+
+        /* KEY AREAS */
+        .key-areas {
+            padding: 35px 6% 55px;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .key-areas h2 {
+            font-family: Georgia, serif;
+            font-size: 38px;
+            color: #004b35;
+            margin-bottom: 15px;
+        }
+
+        .underline {
+            width: 90px;
+            height: 4px;
+            background: linear-gradient(
+                to right,
+                #004b35 50%,
+                #ffcc00 50%
+            );
+            margin: 0 auto 35px;
+        }
+
+        .areas-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .area {
+            padding: 10px;
+        }
+
+        .circle {
+            width: 78px;
+            height: 78px;
+            border-radius: 50%;
+            background: #00563d;
+            color: white;
+            font-size: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+        }
+
+        .area h3 {
+            font-family: Georgia, serif;
+            font-size: 21px;
+            margin-bottom: 12px;
+            color: #004b35;
+        }
+
+        .area p {
+            font-size: 16px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #004b35;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        /* MOBILE SCREEN */
+        @media (max-width: 850px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .logo {
+                justify-content: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .areas-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero {
+                padding: 50px 7%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .logo h1 {
+                font-size: 30px;
+            }
+
+            .logo-icon {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .areas-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <div class="logo-icon">♙</div>
+            <div>
+                <h1>HKM</h1>
+                <p>SCHOOL</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="academics.html">Academics</a>
+            <a href="facilities.html">Facilities</a>
+            <a href="news.html">News & Events</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION WITH SCHOOL IMAGE -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to</h2>
+            <h1><span>HKM</span> School</h1>
+
+            <p class="motto">
+                Quality Education &nbsp; | &nbsp;
+                Discipline &nbsp; | &nbsp; Bright Future
+            </p>
+
+            <p class="description">
+                At HKM School, we nurture young minds,
+                build character and equip our students
+                with the skills they need to succeed in life.
+            </p>
+
+            <a href="about.html" class="btn">
+                Explore Our School &rarr;
+            </a>
+
+            <a href="contact.html" class="btn btn-outline">
+                Contact Us
+            </a>
+        </div>
+    </section>
+
+    <!-- OUR KEY AREAS -->
+    <section class="key-areas">
+        <h2>Our Key Areas</h2>
+        <div class="underline"></div>
+
+        <div class="areas-container">
+
+            <div class="area">
+                <div class="circle">&#127891;</div>
+                <h3>Quality Academics</h3>
+                <p>
+                    We provide a strong academic foundation
+                    for lifelong success.
+                </p>
+            </div>
+
+            <div class="area">
+                <div class="circle">&#128101;</div>
+                <h3>Supportive Environment</h3>
+                <p>
+                    A safe, friendly and inclusive learning
+                    environment for all.
+                </p>
+            </div>
+
+            <div class="area">
+                <div class="circle">&#127979;</div>
+                <h3>Modern Facilities</h3>
+                <p>
+                    Well-equipped classrooms, library,
+                    laboratories and more.
+                </p>
+            </div>
+
+            <div class="area">
+                <div class="circle">&#11088;</div>
+                <h3>Holistic Development</h3>
+                <p>
+                    We encourage talent, creativity
+                    and leadership skills.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 HKM School. All Rights Reserved.</p>
+        <p>Quality Education | Discipline | Bright Future</p>
+    </footer>
+
+</body>
+</html>
